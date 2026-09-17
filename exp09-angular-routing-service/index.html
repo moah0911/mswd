@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Exp9 - Service & Routing</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+</head>
+<body>
+<h2>Student Info App</h2>
+<nav>
+<a href="#!/">Home</a>
+<a href="#!/students">Student List</a>
+<a href="#!/student/1">Student Details</a>
+<a href="#!/login">Login</a>
+</nav>
+<hr>
+<div ng-view></div>
+
+<script type="text/ng-template" id="home.html"><h3>Home</h3><p>Welcome to Student Information System</p></script>
+<script type="text/ng-template" id="students.html">
+<h3>Student List</h3>
+<ul><li ng-repeat="s in students">{{s.roll}} - {{s.name}} ({{s.branch}})</li></ul>
+</script>
+<script type="text/ng-template" id="details.html"><h3>Student Details</h3><p ng-if="student">Roll: {{student.roll}}<br>Name: {{student.name}}<br>Branch: {{student.branch}}<br>Marks: {{student.marks}}</p><p ng-if="!student">Student not found</p></script>
+<script type="text/ng-template" id="login.html"><h3>Login</h3><input placeholder="Username"><br><br><input type="password" placeholder="Password"><br><br><button>Login</button></script>
+
+<script>
+angular.module("myApp",["ngRoute"])
+.service("studentService",function(){
+  var data=[
+    {id:1, roll:"CS01", name:"Amit", branch:"CSE", marks:85},
+    {id:2, roll:"CS02", name:"Priya", branch:"IT", marks:78},
+    {id:3, roll:"CS03", name:"Rahul", branch:"ECE", marks:92}
+  ];
+  this.getAll=function(){return data;};
+  this.getById=function(id){return data.find(s=>s.id==id);};
+})
+.config(function($routeProvider){
+  $routeProvider
+  .when("/",{templateUrl:"home.html"})
+  .when("/students",{templateUrl:"students.html", controller:"ListCtrl"})
+  .when("/student/:id",{templateUrl:"details.html", controller:"DetailCtrl"})
+  .when("/login",{templateUrl:"login.html"})
+  .otherwise({redirectTo:"/"});
+})
+.controller("ListCtrl",function($scope, studentService){ $scope.students=studentService.getAll(); })
+.controller("DetailCtrl",function($scope,$routeParams,studentService){ $scope.student=studentService.getById($routeParams.id); });
+</script>
+</body>
+</html>

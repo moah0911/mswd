@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exp4 - Event Handling</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>#hoverBox{width:200px;height:60px;border:1px solid #999}</style>
+</head>
+<body>
+<h2>Event Handling</h2>
+
+<button id="btnColor">Change Background</button>
+
+<div id="hoverBox">Hover Me</div>
+<p id="hoverMsg"></p>
+
+<input id="textInput" placeholder="Type something">
+<p>Typed: <span id="typed"></span></p>
+
+<div id="details">
+<p><b>Name:</b> Amit</p><p><b>Roll:</b> CS01</p><p><b>Marks:</b> 85</p>
+</div>
+<button id="btnHide">Hide Details</button>
+<button id="btnShow">Show Details</button>
+
+<script>
+$(function(){
+  $("#btnColor").click(function(){
+    $("body").css("background-color","#fff9c4");
+  });
+  $("#hoverBox").mouseenter(function(){
+    $("#hoverMsg").text("Mouse entered the box").css("color","green");
+  }).mouseleave(function(){
+    $("#hoverMsg").text("Mouse left the box").css("color","red");
+  });
+  $("#textInput").on("keypress keyup",function(){
+    $("#typed").text($(this).val());
+  });
+  $("#btnHide").click(function(){ $("#details").hide(); });
+  $("#btnShow").click(function(){ $("#details").show(); });
+});
+</script>
+</body>
+</html>

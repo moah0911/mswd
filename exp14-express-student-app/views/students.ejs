@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Students</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<h1>Students</h1>
+<nav><a href="/">Home</a> | <a href="/students">Students</a> | <a href="/about">About</a></nav>
+<ul>
+<% students.forEach(s=>{ %>
+<li><%= s.roll %> - <%= s.name %> (<%= s.branch %>) - <%= s.marks %></li>
+<% }) %>
+</ul>
+<form method="POST" action="/students">
+<input name="roll" placeholder="Roll" required>
+<input name="name" placeholder="Name" required>
+<input name="branch" placeholder="Branch" required>
+<input name="marks" type="number" placeholder="Marks" required>
+<button type="submit">Add</button>
+</form>
+<script src="/script.js"></script>
+</body></html>

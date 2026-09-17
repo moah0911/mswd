@@ -1,0 +1,9 @@
+{
+  "name": "exp15-mongo-crud",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.5.0"
+  }
+}

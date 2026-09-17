@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exp3 - DOM Manipulation & Traversing</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>.selected{background:yellow}</style>
+</head>
+<body>
+<h2>Student List</h2>
+<ul id="studentList">
+<li>Rahul</li>
+<li class="selected">Priya</li>
+<li>Amit</li>
+</ul>
+
+<input id="newName" placeholder="New student name">
+<button id="btnAdd">Add (append)</button>
+<button id="btnRemove">Remove Selected</button>
+<button id="btnRename">Rename Selected</button>
+<hr>
+<button id="btnParent">Show Parent/Children</button>
+<button id="btnFirstLast">First/Last</button>
+<button id="btnSiblings">Prev/Next Sibling</button>
+
+<div id="output"></div>
+
+<script>
+$(function(){
+  $("#btnAdd").click(function(){
+    let n=$("#newName").val()||"NewStudent";
+    $("#studentList").append("<li>"+n+"</li>");
+    $("#output").text("Added: "+n+" using append()");
+  });
+  $("#btnRemove").click(function(){
+    $(".selected").remove();
+    $("#output").text("Removed selected using remove()");
+  });
+  $("#btnRename").click(function(){
+    $(".selected").text("Priya (Updated)");
+    $("#output").text("Modified using text()");
+  });
+  $("#btnParent").click(function(){
+    let parent=$(".selected").parent().prop("tagName");
+    let children=$("#studentList").children().length;
+    $("#output").html("Parent: "+parent+"<br>Children count: "+children+" using parent() & children()");
+  });
+  $("#btnFirstLast").click(function(){
+    $("#output").html("First: "+$("#studentList li").first().text()+"<br>Last: "+$("#studentList li").last().text());
+  });
+  $("#btnSiblings").click(function(){
+    let prev=$(".selected").prev().text()||"None";
+    let next=$(".selected").next().text()||"None";
+    $("#output").html("Prev: "+prev+"<br>Next: "+next+" using prev() & next()");
+  });
+  // click li to select
+  $(document).on("click","li",function(){
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
+  });
+});
+</script>
+</body>
+</html>

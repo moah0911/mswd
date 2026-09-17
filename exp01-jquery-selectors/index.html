@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exp1 - jQuery Selectors</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<h2>Student Details</h2>
+<div id="details">
+<p id="name">Name: Rahul Sharma</p>
+<p class="roll">Roll No: CS001</p>
+<p id="branch">Branch: CSE</p>
+<p id="marks">Marks: 78</p>
+<a id="profile" href="#">Profile</a>
+</div>
+
+<button id="btnText">Change Text</button>
+<button id="btnHtml">Change HTML</button>
+<button id="btnAttr">Change Attribute</button>
+
+<div id="output"></div>
+
+<script>
+$(function(){
+  $("#btnText").click(function(){
+    $("#name").text("Name: Rahul Sharma (Updated)");
+    $(".roll").text("Roll No: CS001 - Modified");
+    $("#branch").text("Branch: Computer Science");
+    $("#output").text("Text changed using selectors #name, .roll, #branch");
+  });
+  $("#btnHtml").click(function(){
+    $("#marks").html("<b>Marks: 85</b> (Improved)");
+    $("#output").html("HTML content changed for #marks using <b>.html()</b>");
+  });
+  $("#btnAttr").click(function(){
+    $("#profile").attr("href","https://example.com/student/CS001");
+    $("#profile").text("View Profile (link updated)");
+    $("#output").text("Attribute href changed to: " + $("#profile").attr("href"));
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exp2 - Change Style using jQuery</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+.highlight{background:yellow;border:2px solid red;padding:5px}
+.card{border:1px solid #ccc;padding:10px;margin:10px 0}
+</style>
+</head>
+<body>
+<h1 id="heading">Student Information</h1>
+<p id="para">This is a paragraph about students.</p>
+<div id="box" class="card">Sample Box Content</div>
+
+<table id="studentTable" border="1" cellpadding="8">
+<tr><th>Roll</th><th>Name</th><th>Marks</th></tr>
+<tr><td>CS01</td><td>Amit</td><td>85</td></tr>
+<tr><td>CS02</td><td>Priya</td><td>72</td></tr>
+</table>
+
+<br>
+<button id="btnBg">Change Background</button>
+<button id="btnFont">Change Font</button>
+<button id="btnAdd">Add Class</button>
+<button id="btnRemove">Remove Class</button>
+
+<script>
+$(function(){
+  $("#btnBg").click(function(){
+    $("body").css("background-color","#e3f2fd");
+    $("#heading").css({"color":"#0d47a1","font-size":"32px"});
+    $("#para").css({"color":"#333","font-size":"18px"});
+    $("#studentTable").css("border","3px solid #1976d2");
+  });
+  $("#btnFont").click(function(){
+    $("#para").css({"font-family":"Courier New","font-size":"20px","color":"green"});
+  });
+  $("#btnAdd").click(function(){
+    $("#box").addClass("highlight");
+  });
+  $("#btnRemove").click(function(){
+    $("#box").removeClass("highlight");
+  });
+});
+</script>
+</body>
+</html>

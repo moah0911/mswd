@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Exp7 - Angular Filters</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="Ctrl">
+<h2>Built-in Filters</h2>
+Name: <input ng-model="name">
+Fee: <input type="number" ng-model="fee">
+
+<table>
+<tr><th>Type</th><th>Original</th><th>Filtered</th></tr>
+<tr><td>Uppercase</td><td>{{name}}</td><td>{{name | uppercase}}</td></tr>
+<tr><td>Lowercase</td><td>{{name}}</td><td>{{name | lowercase}}</td></tr>
+<tr><td>Currency</td><td>{{fee}}</td><td>{{fee | currency}}</td></tr>
+<tr><td>Currency (INR)</td><td>{{fee}}</td><td>{{fee | currency:"₹"}}</td></tr>
+</table>
+
+<script>
+angular.module("myApp",[]).controller("Ctrl",function($scope){
+  $scope.name="Rahul Sharma"; $scope.fee=50000;
+});
+</script>
+</body>
+</html>

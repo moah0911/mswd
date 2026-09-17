@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Exp8 - Angular Registration Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="Ctrl">
+<h2>Student Registration</h2>
+<form name="regForm" novalidate>
+Name*: <input name="name" ng-model="s.name" required><span class="error" ng-show="regForm.name.$touched && regForm.name.$invalid"> Required</span><br><br>
+Roll*: <input name="roll" ng-model="s.roll" required><span class="error" ng-show="regForm.roll.$touched && regForm.roll.$invalid"> Required</span><br><br>
+Email: <input type="email" name="email" ng-model="s.email"><span class="error" ng-show="regForm.email.$invalid && regForm.email.$dirty"> Invalid email</span><br><br>
+Branch: <input ng-model="s.branch"><br><br>
+</form>
+
+<div ng-show="regForm.$valid">All mandatory fields entered - Valid</div>
+<div ng-show="regForm.$invalid">Please fill mandatory fields - Invalid</div>
+
+<hr>
+<h3>Entered Details:</h3>
+<p>Name: {{s.name}}</p>
+<p>Roll: {{s.roll}}</p>
+<p>Email: {{s.email}}</p>
+<p>Branch: {{s.branch}}</p>
+
+<script>
+angular.module("myApp",[]).controller("Ctrl",function($scope){ $scope.s={}; });
+</script>
+</body>
+</html>
