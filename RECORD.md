@@ -3,7 +3,8 @@
 **Course:** Skill Enhancement Course — VII Semester | **Branch / Section:** ___________ | **Name:** ___________ | **Roll No:** ___________
 
 > Complete record with full source code. Covers all 15 experiments as per syllabus. Only one Node/Express server runs at a time on port `3000`.
-> View this file in **Markdown Preview** (VS Code: `Ctrl+Shift+V`) for proper code highlighting.
+> View this file in **Markdown Preview**
+> Note: Local absolute paths removed as requested; generic filenames used. (VS Code: `Ctrl+Shift+V`) for proper code highlighting.
 
 ---
 
@@ -29,7 +30,7 @@
 
 **CDNs:** `jquery@3.7.1` · `bootstrap@5.3.3` · `angularjs@1.8.2` + `angular-route@1.8.2`
 **Runtime:** `Node v22` · `Express 4.18.2` · `EJS 3.1.9` · `MongoDB Driver 6.5.0`
-**Base Directory:** `/home/mahtwog/mswd`
+**Base Directory:** not disclosed (local)
 
 ---
 
@@ -43,7 +44,7 @@ a) Create HTML page with student details (name, roll, branch, marks).
 b) Use jQuery selectors to change text, HTML content and attributes.
 c) Display modified details.
 
-**Path:** `exp01-jquery-selectors/index.html`
+**File:** `index.html` (local file)
 
 **Theory**
 
@@ -108,7 +109,6 @@ $(function(){
 **How to Run**
 
 ```bash
-cd exp01-jquery-selectors
 xdg-open index.html
 # or: npx serve .
 ```
@@ -127,7 +127,7 @@ a) Page with headings, paragraphs, buttons, student table.
 b) Change background, font color, size, border via jQuery.
 c) Add/remove CSS classes dynamically.
 
-**Path:** `exp02-jquery-style/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -186,7 +186,6 @@ $(function(){
 **How to Run**
 
 ```bash
-cd exp02-jquery-style
 xdg-open index.html
 ```
 
@@ -200,7 +199,7 @@ xdg-open index.html
 
 List of students — `append()`, `remove()`, `text()`, `parent()`, `children()`, `first()`, `last()`, `prev()`, `next()`.
 
-**Path:** `exp03-jquery-dom-traversing/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -273,7 +272,6 @@ $(function(){
 **How to Run**
 
 ```bash
-cd exp03-jquery-dom-traversing
 xdg-open index.html
 ```
 
@@ -289,7 +287,7 @@ Click any `<li>` to change selection, then test buttons.
 
 a) click → background, b) mouseenter/leave message, c) keypress typed text, d) hide/show.
 
-**Path:** `exp04-jquery-events/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -343,7 +341,6 @@ $(function(){
 **How to Run**
 
 ```bash
-cd exp04-jquery-events
 xdg-open index.html
 ```
 
@@ -358,7 +355,7 @@ xdg-open index.html
 - Registration: Name, Roll, DOB, Gender, Branch, Year, Email, Mobile, Address, Submit/Reset with grid, card, alert, forms, buttons.
 - Table: Roll, Name, Branch, Marks, %, Result with `table-striped/bordered/hover`, contextual `table-success/danger`, 5 records, responsive.
 
-**Path 1:** `exp05-bootstrap/registration.html`
+**File 1:** `registration.html`
 
 ```html
 <!DOCTYPE html>
@@ -401,7 +398,7 @@ xdg-open index.html
 </html>
 ```
 
-**Path 2:** `exp05-bootstrap/table.html`
+**File 2:** `table.html`
 
 ```html
 <!DOCTYPE html>
@@ -437,8 +434,8 @@ xdg-open index.html
 **How to Run**
 
 ```bash
-xdg-open exp05-bootstrap/registration.html
-xdg-open exp05-bootstrap/table.html
+xdg-open index.html  # open local file
+xdg-open index.html  # open local file
 ```
 
 Resize window to test `table-responsive`.
@@ -453,7 +450,7 @@ Resize window to test `table-responsive`.
 
 Accept name/branch/marks, display via binding, total/avg via expression, Pass/Fail via `ng-if`.
 
-**Path:** `exp06-angular-databinding/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -495,7 +492,7 @@ angular.module("myApp",[]).controller("StudentCtrl",function($scope){
 **How to Run**
 
 ```bash
-xdg-open exp06-angular-databinding/index.html
+xdg-open index.html  # open local file
 ```
 
 Type in inputs to see live binding.
@@ -510,7 +507,7 @@ Type in inputs to see live binding.
 
 `uppercase`, `lowercase`, `currency` with original vs filtered.
 
-**Path:** `exp07-angular-filters/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -547,7 +544,7 @@ angular.module("myApp",[]).controller("Ctrl",function($scope){
 **How to Run**
 
 ```bash
-xdg-open exp07-angular-filters/index.html
+xdg-open index.html  # open local file
 ```
 
 ---
@@ -560,7 +557,7 @@ xdg-open exp07-angular-filters/index.html
 
 `ng-model` form, display below, mandatory check, valid/invalid messages.
 
-**Path:** `exp08-angular-form/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -601,7 +598,7 @@ angular.module("myApp",[]).controller("Ctrl",function($scope){ $scope.s={}; });
 **How to Run**
 
 ```bash
-xdg-open exp08-angular-form/index.html
+xdg-open index.html  # open local file
 ```
 
 Leave mandatory empty to see Invalid, fill to see Valid.
@@ -616,7 +613,7 @@ Leave mandatory empty to see Invalid, fill to see Valid.
 
 Views Home, Student List, Student Details, Login with routing + service.
 
-**Path:** `exp09-angular-routing-service/index.html`
+**File:** `index.html` (local file)
 
 **Full Code**
 
@@ -677,7 +674,7 @@ angular.module("myApp",["ngRoute"])
 **How to Run**
 
 ```bash
-xdg-open exp09-angular-routing-service/index.html
+xdg-open index.html  # open local file
 ```
 
 Click nav links to test routing.
@@ -692,7 +689,7 @@ Click nav links to test routing.
 
 `fs`, `http`, `path`, `os`, `events` (welcome event).
 
-**Path:** `exp10-node-builtins/app.js`
+**File:** `index.html` (local file)
 
 ```javascript
 const fs=require('fs');
@@ -730,7 +727,6 @@ server.listen(3000,()=>console.log('http: Server running at http://localhost:300
 **How to Run**
 
 ```bash
-cd exp10-node-builtins
 node app.js
 # Browse http://localhost:3000
 # Ctrl+C to stop
@@ -766,7 +762,6 @@ console.log('Div:', calc.div(a,b));
 **How to Run**
 
 ```bash
-cd exp11a-node-calculator
 node app.js
 # Add:25 Sub:15 Mul:100 Div:4
 ```
@@ -799,7 +794,6 @@ console.log('Result:', student.result(m1,m2,m3));
 **How to Run**
 
 ```bash
-cd exp11b-node-student-module
 node app.js
 # Total:255 Percentage:85.00% Result:Pass
 ```
@@ -810,7 +804,7 @@ node app.js
 
 ## Experiment 12: Event Emitter and Streams
 
-**Path:** `exp12-node-events-streams/app.js`
+**File:** `index.html` (local file)
 
 ```javascript
 const fs=require('fs');
@@ -845,7 +839,6 @@ stream.on('end', ()=>console.log('Stream ended'));
 **How to Run**
 
 ```bash
-cd exp12-node-events-streams
 node app.js
 ```
 
@@ -855,7 +848,7 @@ node app.js
 
 ## Experiment 13: Node.js Web Server
 
-**Path:** `exp13-node-webserver/server.js`
+**File:** `index.html` (local file)
 
 ```javascript
 const http=require('http');
@@ -893,7 +886,6 @@ server.listen(3000,()=>console.log('Server at http://localhost:3000  try /, /stu
 **How to Run**
 
 ```bash
-cd exp13-node-webserver
 node server.js
 curl http://localhost:3000/
 curl http://localhost:3000/students
@@ -1036,7 +1028,6 @@ console.log('Static JS loaded');
 **How to Run**
 
 ```bash
-cd exp14-express-student-app
 npm install
 node app.js
 # http://localhost:3000  http://localhost:3000/students  http://localhost:3000/style.css
@@ -1176,7 +1167,6 @@ app.listen(3000,()=> console.log('Exp15 at http://localhost:3000  (fallback memo
 **How to Run**
 
 ```bash
-cd exp15-mongo-express-crud
 npm install
 node app.js
 curl -X POST -H "Content-Type: application/json" -d '{"roll":"CS01","name":"Amit","branch":"CSE","marks":85}' http://localhost:3000/students
@@ -1195,9 +1185,9 @@ curl -X DELETE http://localhost:3000/students/CS01
 **Static (no install) — Exp 01-09**
 
 ```bash
-xdg-open exp01-jquery-selectors/index.html
-xdg-open exp05-bootstrap/registration.html
-xdg-open exp06-angular-databinding/index.html
+xdg-open index.html  # open local file
+xdg-open index.html  # open local file
+xdg-open index.html  # open local file
 # internet required for CDN
 ```
 
@@ -1215,7 +1205,6 @@ node exp13-node-webserver/server.js
 **Express/Mongo — Exp 14-15**
 
 ```bash
-cd exp14-express-student-app && npm install && node app.js
 # http://localhost:3000
 cd ../exp15-mongo-express-crud && npm install && node app.js
 ```

@@ -17,9 +17,7 @@ Marks3: <input type="number" ng-model="m3">
 <p>Name: <span ng-bind="name"></span></p>
 <p>Branch: {{branch}}</p>
 <p>Total: {{ (m1||0)+(m2||0)+(m3||0) }}</p>
-<p>Average: {{ ((m1||0)+(m2||0)+(m3||0)/3) | number:2 }}</p>
-<!-- correct average expression -->
-<p>Average (fixed): {{ ((m1||0)+(m2||0)+(m3||0))/3 | number:2 }}</p>
+<p>Average : {{ ((m1||0)+(m2||0)+(m3||0))/3 | number:2 }}</p>
 <p ng-if="((m1||0)+(m2||0)+(m3||0))/3 >=40">Pass</p>
 <p ng-if="((m1||0)+(m2||0)+(m3||0))/3 <40 && (m1||m2||m3)">Fail</p>
 

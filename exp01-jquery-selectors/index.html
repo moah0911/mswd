@@ -19,24 +19,20 @@
 <button id="btnHtml">Change HTML</button>
 <button id="btnAttr">Change Attribute</button>
 
-<div id="output"></div>
 
 <script>
 $(function(){
   $("#btnText").click(function(){
-    $("#name").text("Name: Rahul Sharma (Updated)");
-    $(".roll").text("Roll No: CS001 - Modified");
+    $("#name").text("Name: Rahul Shetty");
+    $(".roll").text("Roll No: CS002 ");
     $("#branch").text("Branch: Computer Science");
-    $("#output").text("Text changed using selectors #name, .roll, #branch");
   });
   $("#btnHtml").click(function(){
     $("#marks").html("<b>Marks: 85</b> (Improved)");
-    $("#output").html("HTML content changed for #marks using <b>.html()</b>");
   });
   $("#btnAttr").click(function(){
     $("#profile").attr("href","https://example.com/student/CS001");
     $("#profile").text("View Profile (link updated)");
-    $("#output").text("Attribute href changed to: " + $("#profile").attr("href"));
   });
 });
 </script>

@@ -2,3 +2,5 @@ node_modules/
 students.txt
 .DS_Store
 *.log
+RECORD.md
+*.md
