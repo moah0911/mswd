@@ -1,5 +1,5 @@
 {
-  "name": "mswd",
+  "name": "@hunting.vector/mswd",
   "version": "1.0.0",
   "description": "MSWD SEC Lab – 15 experiments (jQuery, Bootstrap, Angular, Node, Express, MongoDB) with selective install",
   "keywords": ["mswd", "mean", "lab", "experiments", "jquery", "angular", "express", "mongodb", "sec"],

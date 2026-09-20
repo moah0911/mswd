@@ -46,8 +46,10 @@ function getProjectRoot() {
   // fallback: walk up from __dirname to find nearest package.json not this one
   // npm <7 had different env; use cwd
   const cwd = process.cwd();
-  // if cwd ends with node_modules/mswd, go up 2 levels
-  if (cwd.includes(path.join('node_modules', 'mswd'))) {
+  // if cwd ends with node_modules/mswd or node_modules/@hunting.vector/mswd, go up
+  if (cwd.includes(path.join('node_modules', 'mswd')) || cwd.includes(path.join('node_modules', '@hunting.vector', 'mswd'))) {
+    // for scoped, go up 3 levels, for unscoped 2 – use heuristic: find node_modules segment
+    if (cwd.includes(path.join('@hunting.vector', 'mswd'))) return path.resolve(cwd, '..', '..', '..');
     return path.resolve(cwd, '..', '..');
   }
   return path.resolve(cwd);
