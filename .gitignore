@@ -4,3 +4,7 @@ students.txt
 *.log
 RECORD.md
 *.md
+!README.md
+!LICENSE
+*.tgz
+package-lock.json

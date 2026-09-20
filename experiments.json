@@ -1,0 +1,18 @@
+[
+  { "id": "exp01", "dir": "exp01-jquery-selectors", "title": "jQuery Selectors", "stack": "jquery" },
+  { "id": "exp02", "dir": "exp02-jquery-style", "title": "jQuery Style / CSS Manipulation", "stack": "jquery" },
+  { "id": "exp03", "dir": "exp03-jquery-dom-traversing", "title": "jQuery DOM Traversing", "stack": "jquery" },
+  { "id": "exp04", "dir": "exp04-jquery-events", "title": "jQuery Events", "stack": "jquery" },
+  { "id": "exp05", "dir": "exp05-bootstrap", "title": "Bootstrap – Registration & Table", "stack": "bootstrap" },
+  { "id": "exp06", "dir": "exp06-angular-databinding", "title": "AngularJS Data Binding", "stack": "angular" },
+  { "id": "exp07", "dir": "exp07-angular-filters", "title": "AngularJS Filters", "stack": "angular" },
+  { "id": "exp08", "dir": "exp08-angular-form", "title": "AngularJS Form Validation", "stack": "angular" },
+  { "id": "exp09", "dir": "exp09-angular-routing-service", "title": "AngularJS Routing & Service", "stack": "angular" },
+  { "id": "exp10", "dir": "exp10-node-builtins", "title": "Node.js Built-ins (fs, path, os)", "stack": "node" },
+  { "id": "exp11a", "dir": "exp11a-node-calculator", "title": "Node.js Calculator Module", "stack": "node" },
+  { "id": "exp11b", "dir": "exp11b-node-student-module", "title": "Node.js Student Module", "stack": "node" },
+  { "id": "exp12", "dir": "exp12-node-events-streams", "title": "Node.js Events & Streams", "stack": "node" },
+  { "id": "exp13", "dir": "exp13-node-webserver", "title": "Node.js Web Server (http)", "stack": "node" },
+  { "id": "exp14", "dir": "exp14-express-student-app", "title": "Express Student App (EJS)", "stack": "express", "hasPackageJson": true },
+  { "id": "exp15", "dir": "exp15-mongo-express-crud", "title": "MongoDB + Express CRUD & Aggregation", "stack": "mongo", "hasPackageJson": true }
+]

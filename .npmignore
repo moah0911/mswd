@@ -1,0 +1,17 @@
+# mswd publish – exclude large/unneeded from npm tarball
+node_modules/
+exp14-express-student-app/node_modules/
+exp15-mongo-express-crud/node_modules/
+package-lock.json
+exp14-express-student-app/package-lock.json
+exp15-mongo-express-crud/package-lock.json
+.git/
+.gitignore
+*.log
+.DS_Store
+COMPLETE_RECORD.docx
+RD_SEC RECORD FORMAT.docx
+SEC_LabExperiments_BATHC1_MSWD.docx
+# keep README and LICENSE via files whitelist – but this complements
+!README.md
+!LICENSE

@@ -1,0 +1,54 @@
+{
+  "name": "mswd",
+  "version": "1.0.0",
+  "description": "MSWD SEC Lab – 15 experiments (jQuery, Bootstrap, Angular, Node, Express, MongoDB) with selective install",
+  "keywords": ["mswd", "mean", "lab", "experiments", "jquery", "angular", "express", "mongodb", "sec"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moah0911/mswd.git"
+  },
+  "homepage": "https://github.com/moah0911/mswd#readme",
+  "bugs": {
+    "url": "https://github.com/moah0911/mswd/issues"
+  },
+  "author": "moah0911",
+  "files": [
+    "exp01-jquery-selectors/",
+    "exp02-jquery-style/",
+    "exp03-jquery-dom-traversing/",
+    "exp04-jquery-events/",
+    "exp05-bootstrap/",
+    "exp06-angular-databinding/",
+    "exp07-angular-filters/",
+    "exp08-angular-form/",
+    "exp09-angular-routing-service/",
+    "exp10-node-builtins/",
+    "exp11a-node-calculator/",
+    "exp11b-node-student-module/",
+    "exp12-node-events-streams/",
+    "exp13-node-webserver/",
+    "exp14-express-student-app/app.js",
+    "exp14-express-student-app/package.json",
+    "exp14-express-student-app/public/",
+    "exp14-express-student-app/views/",
+    "exp15-mongo-express-crud/app.js",
+    "exp15-mongo-express-crud/package.json",
+    "bin/",
+    "scripts/",
+    "experiments.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "mswd": "bin/mswd.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "list": "node bin/mswd.js list",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
